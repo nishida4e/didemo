@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 
 @SpringBootApplication
 public class DidemoApplication implements CommandLineRunner {
@@ -30,6 +31,13 @@ public class DidemoApplication implements CommandLineRunner {
 		// TestC
 		int resC = calcAuto.calc(a, b);
 		System.out.println("TestC: " + resC);
+		
+		// Pbkdf2Password
+		/*
+		String pw = "test";
+		System.out.println("Pbkdf2Password: " + pw);
+		System.out.println(new Pbkdf2PasswordEncoder().encode(pw));
+		*/
 
 	}
 
